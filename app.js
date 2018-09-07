@@ -10,6 +10,7 @@ const mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var youtubeRouter = require('./routes/youtubeRoute');
+var dotaRouter = require('./routes/dota')
 
 var app = express();
 
@@ -34,6 +35,7 @@ db.once('open', function() {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/youtube', youtubeRouter);
+app.use('/dota', dotaRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
