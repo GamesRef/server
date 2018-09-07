@@ -27,7 +27,7 @@ const searchHeroData = (req, res) => {
         let result = []
         
         data.data.forEach(element => {
-            if (element.localized_name.toLowerCase().indexOf(heroName.toLowerCase()) > -1) {
+            if (element.primary_attr.toLowerCase().indexOf(heroName.toLowerCase()) > -1) {
                 result.push(element);
               }
         });
