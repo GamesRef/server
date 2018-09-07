@@ -11,6 +11,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var youtubeRouter = require('./routes/youtubeRoute');
 var dotaRouter = require('./routes/dota')
+var quotesRouter = require('./routes/quotes');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/youtube', youtubeRouter);
 app.use('/dota', dotaRouter)
+app.use('/quotes', quotesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
