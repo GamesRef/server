@@ -29,7 +29,7 @@ module.exports = {
         User.findOne({
             email : email
         })
-        .then(function(user){
+        .then(function(user){            
             if (user) {
                 let check_pass = bcrypt.compareSync(password, user.password)
                 if (check_pass) {
@@ -60,6 +60,7 @@ module.exports = {
             }
         })
         .catch(function(err){
+            // console.log('masuk');
             res.status(500).json({
                 message : err.message
             })
