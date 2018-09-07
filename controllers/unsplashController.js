@@ -7,7 +7,7 @@ module.exports = {
         var options = {
             url: 'https://api.unsplash.com/users/andryjns/collections?client_id=3e292af3a1fef09f387d93b55540ec1bca19ad55bd01e4568816038a965c9ba2',
             headers: {
-                'User-Agent': 'request',
+                'User-Agent': 'request',    
                 //"Authorization": 'token ' + accessToken
             }
         }
@@ -33,6 +33,6 @@ module.exports = {
                 })
             }
         }
-        request.get(options, callback);
-    },
+        request.get(options, callback)
+    }
 }
